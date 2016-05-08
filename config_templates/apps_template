@@ -1,0 +1,6 @@
+INSTALLED_APPS += [
+	'djangobower',
+	'induwo_registration'
+]
+
+LOGIN_REDIRECT_URL = '/accounts/profile'

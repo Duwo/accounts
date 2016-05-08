@@ -1,0 +1,5 @@
+Django==1.9.5
+django-bower==5.0.4
+nodeenv==0.13.6
+numpy==1.11.0
+six==1.10.0

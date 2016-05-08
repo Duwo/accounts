@@ -1,0 +1,65 @@
+body,html{
+	background: url('images/shapyrepeat.jpg') repeat right bottom;
+}
+
+div.breadcrumbs
+{
+	background: white;
+	color: black;
+	font-family: Arial, Charcoal, sans-serif;
+}
+
+#navbar
+{
+	font-family: Impact, Charcoal, sans-serif;
+	letter-spacing: 1px;
+}
+
+#content h1 
+{
+	font-family: Impact, Charcoal, sans-serif;
+	letter-spacing: 1px;
+}
+
+#content p
+{
+	font-family: Verdana,Geneva,sans-serif; 
+}
+
+#induwo_gallery a
+{
+	float: left;
+	list-style: none;
+  	margin:5px;
+	padding:5px;
+	width: 20%;
+	height:auto;	
+	border: 1px solid lightgray;
+	list-style:none;
+}
+
+#induwo_gallery img 
+{
+	width:100%;
+}
+
+#middle_wrapper {
+	margin-bottom: 20px;
+}
+.container-fluid {
+	background: #859C78;
+	width: 80%;
+}
+
+footer 
+{
+	height: 200px;
+	display: none;
+} 
+
+
+.navbar, .navbar-default, .container-fluid, footer
+{
+    background-color: white;
+    border-radius: 25px;
+}

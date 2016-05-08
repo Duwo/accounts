@@ -1,0 +1,71 @@
+
+{# Load the tag library #}
+{#% load bootstrap3 %#}
+{% load staticfiles %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+
+<!DOCTYPE html>
+<html{% if request.LANGUAGE_CODE %} lang="{{ request.LANGUAGE_CODE }}"{% endif %}>
+<head>
+ 	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}" />
+</head>
+{% load i18n %}
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}">
+
+<!-- Container -->
+
+<!-- Container -->
+	<div class="container-fluid"
+    		<div id="header">
+        {% if user.is_active and user.is_staff %}
+        			<div id="user-tools">
+            			{% block welcome-msg %}
+                			{% trans 'Welcome,' %}
+                			<strong>{% firstof user.get_short_name user.get_username %}</strong>.
+            			{% endblock %}
+            			{% block userlinks %}
+                			{% url 'django-admindocs-docroot' as docsroot %}
+                			{% if docsroot %}
+                    			<a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+               				{% endif %}
+               				{% if user.has_usable_password %}
+                				<a href="{% url 'admin:index' %}">{% trans 'Change password' %}</a> /
+                			{% endif %}
+                			<a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+            			{% endblock %}
+        			</div>
+      	  		{% endif %}
+		</div>  
+		</div>    	
+<p></p>
+<p></p>
+<a href="{% url 'admin:index' %}">Admin</a>
+<p></p>
+<a href="{% url 'auth_login' %}">Accounts</a>
+<p></p>
+<a href="{% url 'induwo:index.html' %}">Induwo </a>
+<p></p>
+<a href="{% url 'jetty:index' %}">Jetty</a>
+
+
+{% load tz %}
+{% get_current_timezone as TIME_ZONE %}
+<form action="{% url 'set_timezone' %}" method="POST">
+    {% csrf_token %}
+    <label for="timezone">Time zone:</label>
+    <select name="timezone">
+        {% for tz in timezones %}
+        <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected="selected"{% endif %}>{{ tz }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Set" />
+</form>
+
+
+
+</body>
+
+
+ 

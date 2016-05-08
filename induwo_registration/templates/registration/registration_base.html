@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block branding %}
+Vegan Forum  
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static 'induwo_registration/style.css' %}" />
+{% endblock %}
+
+{% block content_title %}
+{% block title %}
+{% endblock %}
+{% endblock %}
+
+{% block navbar_styling %}
+navbar navbar-default container-fluid 
+{% endblock %}
+
+{% block standard-nav_styling %}
+collapse navbar-collapse
+{% endblock %}
+
+{% block left-nav_styling %}
+    nav navbar-nav
+{% endblock %}
+
+{% block right-nav_styling %}
+    nav navbar-nav navbar-right
+{% endblock %}
+
+{% block coltype %}
+row
+{% endblock %}
+
+{% block navbar_left %}
+	{% if user.username %}
+	   <li style="list-style-type: none;"><a>Welcome {{user.username}}</a></li>
+	{% else %}
+	   <li style="list-style-type: none;">
+	     <a href="{% url 'registration_register' %}">Welcome, register an account! </a>
+	   </li>
+	   <li style="list-style-type: none;">
+	     <a href="{% url 'auth_login' %}">or login </a>
+	   </li>
+	{% endif %}
+{% endblock %}
+
+{% block navbar_right %}
+	<li class="dropdown" style="list-style-type: none">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">I Want To<span class="caret"></span></a>
+        <ul class="dropdown-menu" style="list-style-type: none;">
+        	{% if user.username %}
+        		<li style="list-style-type: none;"><a href="{% url 'auth_logout' %}">Log out</a></li>
+			{% else %}
+        		<li style="list-style-type: none;"><a href="{% url 'registration_register' %}">Register</a></li>
+        		<li style="list-style-type: none;"><a href="{% url 'auth_login' %}">Log in</a></li>
+        	{% endif %}
+        </ul>
+	</li>
+{% endblock %}
