@@ -26,7 +26,7 @@ django:
 	cat config_templates/static_template >> mysite/mysite/settings.py
 	cat config_templates/apps_template >> mysite/mysite/settings.py
 
-install_dev:
+install_dev: django
 	source py3env/bin/activate ;\
 	ln -s `pwd`/$(APP_NAME) mysite/$(APP_NAME) ;\
 	python mysite/manage.py migrate ;\
@@ -34,7 +34,7 @@ install_dev:
 	python mysite/manage.py collectstatic --noinput;\
 
 tar: 
-	#source py3env/bin/activate ;\
+	source py3env/bin/activate ;\
 	python setup.py sdist
 
 install_prod:
