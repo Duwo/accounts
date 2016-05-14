@@ -34,7 +34,7 @@ install_dev:
 	python mysite/manage.py collectstatic --noinput;\
 
 tar: 
-	source py3env/bin/activate ;\
+	#source py3env/bin/activate ;\
 	python setup.py sdist
 
 install_prod:
