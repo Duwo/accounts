@@ -35,7 +35,7 @@ install_dev: django
 
 tar: 
 	source py3env/bin/activate ;\
-	python setup.py sdist
+	python setup.py sdist -o
 
 install_prod:
 	source py3env/bin/activate ;\

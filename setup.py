@@ -1,5 +1,6 @@
 import os
-from setuptools import setup
+from distutils.core import setup
+#from setuptools import setup
 
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
