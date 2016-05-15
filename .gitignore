@@ -2,3 +2,5 @@ py3env
 mysite
 *.pyc
 __pycache__
+dist
+induwo_registration.egg-info
