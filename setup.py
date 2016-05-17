@@ -1,5 +1,5 @@
 import os
-from distutils.core import setup
+from setuptools import setup
 
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
@@ -7,15 +7,12 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
-files = ["jetty/*"]
-
 setup(
     name='induwo-registration',
     version='0.1',
     packages=['induwo_registration'],
-    files = ["templates/*, static/*"],
     include_package_data=True,
-    license='BSD License',  # example license
+    license='MIT License',
     description='A simple Django app to work as homepage',
     long_description=README,
     url='https://erikrodhe.com/',

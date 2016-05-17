@@ -1,0 +1,11 @@
+<li class="dropdown" style="list-style-type: none">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">I Want To<span class="caret"></span></a>
+    <ul class="dropdown-menu" style="list-style-type: none;">
+        {% if user.username %}
+            <li style="list-style-type: none;"><a href="{% url 'auth_logout' %}">Log out</a></li>
+        {% else %}
+            <li style="list-style-type: none;"><a href="{% url 'registration_register' %}">Register</a></li>
+            <li style="list-style-type: none;"><a href="{% url 'auth_login' %}">Log in</a></li>
+        {% endif %}
+    </ul>
+</li>

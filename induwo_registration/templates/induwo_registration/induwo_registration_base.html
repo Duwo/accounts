@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block branding %}
+  Vegan Forum  
+{% endblock %}
+
+{% block extrastyle %}
+  <link rel="stylesheet" type="text/css" href="{% static 'induwo_registration/style.css' %}" />
+{% endblock %}
+
+{% block content_title %}
+  <h1>
+    {% block title %}
+    {% endblock %}
+  </h1>
+  <hr>
+{% endblock %}
+
+{% block navbar_styling %}
+navbar navbar-default container-fluid 
+{% endblock %}
+
+{% block standard-nav_styling %}
+collapse navbar-collapse
+{% endblock %}
+
+{% block left-nav_styling %}
+    nav navbar-nav
+{% endblock %}
+
+{% block right-nav_styling %}
+    nav navbar-nav navbar-right
+{% endblock %}
+
+{% block middle_wrapper_styling %} 
+container-fluid
+{% endblock %}
+
+{% block coltype %}
+row
+{% endblock %}
+
+{% block navbar_left %}
+  {% include "induwo_registration/includes/navbar_left.html" %}
+{% endblock %}
+
+{% block navbar_right %}
+  {% include "induwo_registration/includes/navbar_right.html" %}
+{% endblock %}
