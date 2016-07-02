@@ -1,3 +1,3 @@
 #!/usr/bin
-# git submodule update --init --recursive
 source ./py3env/bin/activate
+export SECRET_KEY=$RANDOM

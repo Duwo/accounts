@@ -1,6 +1,19 @@
 INSTALLED_APPS += [
-	'djangobower',
-	'induwo_registration'
+	'my_registration'
 ]
 
+
 LOGIN_REDIRECT_URL = '/accounts/profile'
+
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+DATABASE_ROUTERS = [ "mysite.db_router.AuthRouter", "mysite.db_router.PortfolioRouter", ]
+DATABASES = {
+    'default': {
+          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+          'NAME': os.environ.get("AUTH_DB"),       
+          'USER': os.environ.get("POSTGRES_USER"),
+          'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
+          'HOST': os.environ.get("AUTH_PORT_5432_TCP_ADDR"),
+          'PORT': os.environ.get("POSTGRES_PORT_5432_TCP_PORT"),
+    },
+}

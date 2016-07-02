@@ -1,6 +1,6 @@
 include LICENSE
 include README.rst
-recursive-include induwo_registration/static/induwo_registration *
-recursive-include induwo_registration/templates/induwo_registration *
-recursive-include induwo_registration/templates/registration *
+recursive-include my_registration/static/my_registration *
+recursive-include my_registration/templates/my_registration *
+recursive-include my_registration/templates/registration *
 recursive-include docs *

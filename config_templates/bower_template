@@ -1,8 +1,0 @@
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-# BOWER
-BOWER_COMPONENTS_ROOT = BASE_DIR
-BOWER_INSTALLED_APPS = (
-    'jquery',
-    'bootstrap',
-    )

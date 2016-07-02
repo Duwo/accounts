@@ -1,8 +1,12 @@
 py3env
-mysite
 *.pyc
 __pycache__
 dist
-induwo_registration.egg-info
+induwo_my_registration.egg-info
 MANIFEST
 build
+bower_components
+static
+requirements
+setup.py
+db.sqlite3

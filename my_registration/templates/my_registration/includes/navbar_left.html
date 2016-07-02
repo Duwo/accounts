@@ -1,0 +1,10 @@
+{% if user.username %}
+   <li style="list-style-type: none;"><a>Welcome {{user.username}}</a></li>
+{% else %}
+   <li style="list-style-type: none;">
+     <a href="{% url 'registration_register' %}">Welcome, register an account! </a>
+   </li>
+   <li style="list-style-type: none;">
+     <a href="{% url 'auth_login' %}">or login </a>
+   </li>
+{% endif %}
