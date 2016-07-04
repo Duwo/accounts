@@ -11,13 +11,13 @@ ADD /mysite /app/mysite
 COPY /manage.py /app/manage.py
 RUN chown -R uwsgi /app
 
-ADD /media /media
-RUN chown -R uwsgi /media
+ADD /auth_media /auth_media
+RUN chown -R uwsgi /auth_media
 
-ADD /static /static
-ADD /bower_components /bower_components
-RUN chown -R uwsgi /static
-RUN chown -R uwsgi /bower_components
+ADD /auth_static /auth_static
+ADD /bower_components /app/bower_components
+RUN chown -R uwsgi /auth_static
+RUN chown -R uwsgi /app/bower_components
 
 ADD /mysite.ini /mysite.ini
 RUN chown uwsgi mysite.ini

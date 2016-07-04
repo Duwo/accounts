@@ -130,8 +130,8 @@ STATICFILES_DIRS = [
 ]
 
 #STATIC_URL = "https://dl.dropboxusercontent.com/u/29474323/static/"
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_URL = "/auth_static/"
+STATIC_ROOT = "auth_static/"
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_ROOT = "/auth_media/"
 LOGIN_REDIRECT_URL = '/accounts/profile'

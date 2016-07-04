@@ -6,7 +6,7 @@ induwo_my_registration.egg-info
 MANIFEST
 build
 bower_components
-static
+auth_static
 requirements
 setup.py
 db.sqlite3
