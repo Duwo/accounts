@@ -1,1 +1,1 @@
-../../django_ci/Makefile
+/Users/erikrodhe/Templates/make/Makefile.django
