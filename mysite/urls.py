@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import patterns, include, url
 urlpatterns = [
-    url(r'^auth_admin/', admin.site.urls),
+    url(r'^accounts_admin/', admin.site.urls),
     url(r'^accounts/', include('my_registration.urls')),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
-    url('^', include('django.contrib.auth.urls')),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
 ]
 

@@ -1,3 +1,5 @@
 #!/usr/bin
 source ./py3env/bin/activate
 export SECRET_KEY=$RANDOM
+export DJANGO_ENV=test
+export DEBUG=True
