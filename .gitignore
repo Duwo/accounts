@@ -1,12 +1,11 @@
 py3env
 *.pyc
 __pycache__
-dist
 induwo_my_registration.egg-info
 MANIFEST
-build
 bower_components
 auth_static
 requirements
 setup.py
 db.sqlite3
+Dockerfile
