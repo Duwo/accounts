@@ -1,9 +1,0 @@
-
-from django.conf.urls import patterns, include, url
-
-urlpatterns += [
-    url(r'^accounts/', include('my_registration.urls')),
-    url(r'^accounts/', include('registration.backends.hmac.urls')),
-    url('^', include('django.contrib.auth.urls')),
-]
-
