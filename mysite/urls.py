@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import patterns, include, url
 urlpatterns = [
     url(r'^accounts_admin/', admin.site.urls),
-    url(r'^accounts/', include('my_registration.urls')),
+    url(r'^accounts/', include('accounts.urls')),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),
 ]

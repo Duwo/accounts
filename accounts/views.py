@@ -23,4 +23,4 @@ def custom_login(request):
         return login(request)
 
 class ProfileView(TemplateView):
-    template_name = "my_registration/profile.html"
+    template_name = "accounts/profile.html"

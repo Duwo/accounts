@@ -1,10 +1,10 @@
 py3env
 *.pyc
 __pycache__
-induwo_my_registration.egg-info
+induwo_accounts.egg-info
 MANIFEST
 bower_components
-auth_static
+accounts_static
 requirements
 setup.py
 db.sqlite3
