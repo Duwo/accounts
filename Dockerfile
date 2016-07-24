@@ -1,11 +1,10 @@
 FROM python:3.4
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
 
-ADD /requirements /requirements
-COPY /dist/induwo-accounts-0.2.tar.gz /requirements/
+COPY /dist/induwo-accounts-0.2.tar.gz /app/induwo-accounts-0.2.tar.gz
 ADD /requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
-RUN pip install  /requirements/induwo-accounts-0.2.tar.gz
+RUN pip install -r /requirements.txt 
+RUN pip install /app/induwo-accounts-0.2.tar.gz
 
 ADD /mysite /app/mysite
 COPY /manage.py /app/manage.py
