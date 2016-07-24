@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SITE_ID = 1
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('ACCOUNTS_SECRET_KEY')
 if  os.environ.get('DEBUG') == "True":
   DEBUG = True
 
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
           'ENGINE': 'django.db.backends.postgresql_psycopg2',
-          'NAME': os.environ.get("AUTH_DB"),       
-          'USER': os.environ.get("POSTGRES_USER"),
-          'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
-          'HOST': os.environ.get("AUTH_PORT_5432_TCP_ADDR"),
-          'PORT': os.environ.get("POSTGRES_PORT_5432_TCP_PORT"),
+          'NAME': os.environ.get("ACCOUNTS_DB"),       
+          'USER': os.environ.get("ACCOUNTS_POSTGRES_USER"),
+          'PASSWORD': os.environ.get("ACCOUNTS_POSTGRES_PASSWORD"),
+          'HOST': os.environ.get("ACCOUNTS_POSTGRES_ADDR"),
+          'PORT': os.environ.get("ACCOUNTS_POSTGRES_PORT"),
     },
 }
 
@@ -131,11 +131,14 @@ STATICFILES_DIRS = [
   os.path.join(BASE_DIR, "bower_components/")
 ]
 
-#STATIC_URL = "https://dl.dropboxusercontent.com/u/29474323/static/"
-STATIC_URL = "/auth_static/"
-STATIC_ROOT = "auth_static/"
-MEDIA_URL = "/media/"
-MEDIA_ROOT = "/auth_media/"
+if  os.environ.get('DEBUG') != "True":
+  STATIC_URL = "https://dl.dropboxusercontent.com/u/29474323/static/"
+else:
+  STATIC_URL = "/accounts_static/"
+
+STATIC_ROOT = "accounts_static/"
+MEDIA_URL = "/accounts_media/"
+MEDIA_ROOT = "/accounts_media/"
 LOGIN_REDIRECT_URL = '/accounts/profile'
 
 if os.environ.get('DJANGO_ENV') == "test":
