@@ -24,8 +24,7 @@ SITE_ID = 1
 SECRET_KEY = os.environ.get('ACCOUNTS_SECRET_KEY')
 if  os.environ.get('DEBUG') == "True":
   DEBUG = True
-
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['www.erikrodhe.se','www.erikrodhe.com','erikrodhe.se','erikrodhe.com', 'localhost']
 
 # Application definition
 INSTALLED_APPS = [
