@@ -132,11 +132,11 @@ STATICFILES_DIRS = [
 ]
 
 if  os.environ.get('DEBUG') != "True":
-  STATIC_URL = "https://dl.dropboxusercontent.com/u/29474323/static/"
+  STATIC_URL = "https://dl.dropboxusercontent.com/u/29474323/accounts_static/"
 else:
   STATIC_URL = "/accounts_static/"
 
-STATIC_ROOT = "accounts_static/"
+STATIC_ROOT = "/accounts_static/"
 MEDIA_URL = "/accounts_media/"
 MEDIA_ROOT = "/accounts_media/"
 LOGIN_REDIRECT_URL = '/accounts/profile'

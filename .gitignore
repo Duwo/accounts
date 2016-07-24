@@ -3,9 +3,14 @@ py3env
 __pycache__
 induwo_accounts.egg-info
 MANIFEST
-bower_components
-accounts_static
 requirements
 setup.py
 db.sqlite3
-Dockerfile
+
+accounts_static/*
+accounts_media/*
+bower_components/*
+
+!accounts_static/.keep
+!accounts_media/.keep
+!bower_components/.keep
