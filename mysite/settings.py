@@ -140,7 +140,9 @@ MEDIA_URL = "/accounts_media/"
 MEDIA_ROOT = "/accounts_media/"
 LOGIN_REDIRECT_URL = '/accounts/profile'
 
-if os.environ.get('DJANGO_ENV') == "test":
+if  os.environ.get('DJANGO_ENV') == "prod":
+  STATIC_URL = "https://dl.dropboxusercontent.com/u/29474323/porfolio_static/"
+elif os.environ.get('DJANGO_ENV') == "test":
   DATABASES = {
       'default': {
           'ENGINE': 'django.db.backends.sqlite3',
